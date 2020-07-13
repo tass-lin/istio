@@ -1,0 +1,16 @@
+---
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+metadata:
+  name: grafana-ports-mtls-disabled
+  namespace: istio-system
+  labels:
+    app: grafana
+    release: istio
+spec:
+  selector:
+    matchLabels:
+      app: grafana
+  portLevelMtls:
+    3000:
+      mode: DISABLE

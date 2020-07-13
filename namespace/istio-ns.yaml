@@ -1,0 +1,33 @@
+# ---
+# apiVersion: v1
+# kind: Namespace
+# metadata:
+#   labels:
+#     istio-injection: disabled
+#   managedFields:
+#   - apiVersion: v1
+#     fieldsType: FieldsV1
+#     fieldsV1:
+#       f:metadata:
+#         f:labels:
+#           .: {}
+#           f:istio-injection: {}
+#       f:status:
+#         f:phase: {}
+#     manager: istioctl
+#     operation: Update
+#   name: istio-system
+#   resourceVersion: "1047"
+#   selfLink: /api/v1/namespaces/istio-system
+# spec:
+#   finalizers:
+#   - kubernetes
+# status:
+#   phase: Active
+--- 
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    istio-injection: disabled
+  name: istio-system
